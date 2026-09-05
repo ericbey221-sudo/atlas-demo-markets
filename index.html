@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas Demo Markets — Paper Trading</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="demo-banner">DEMO / PAPER TRADING — NO REAL FUNDS • No deposits or withdrawals are processed</div>
+<header class="topbar">
+  <div class="brand"><span class="mark">A</span><span>Atlas Demo Markets</span></div>
+  <nav><a href="#dashboard">Dashboard</a><a href="#markets">Markets</a><a href="#transactions">Transactions</a><a href="#account">Account</a></nav>
+</header>
+
+<main class="container">
+<section id="dashboard" class="hero">
+  <div><p class="eyebrow">PAPER TRADING ACCOUNT</p><h1>Practice trading with a professional dashboard.</h1>
+  <p class="muted">Create a fictional portfolio, monitor sample market data, and learn how a trading dashboard works.</p>
+  <button onclick="resetDemo()">Reset Demo Account</button>
+  </div>
+  <div class="balance-card"><span>Demo portfolio value</span><strong id="balance">$10,000.00</strong><small>Fictional balance</small></div>
+</section>
+
+<section class="grid stats">
+  <div class="card"><span>Cash</span><strong id="cash">$6,250.00</strong></div>
+  <div class="card"><span>Invested</span><strong id="invested">$3,750.00</strong></div>
+  <div class="card"><span>Demo P/L</span><strong id="pnl">+$250.00</strong></div>
+  <div class="card"><span>Positions</span><strong id="positions">3</strong></div>
+</section>
+
+<section class="panel">
+<h2>Portfolio performance</h2><canvas id="chart"></canvas>
+</section>
+
+<section id="markets" class="panel">
+<h2>Sample markets</h2>
+<div class="table-wrap"><table><thead><tr><th>Asset</th><th>Price</th><th>24h</th><th>Action</th></tr></thead>
+<tbody id="marketRows"></tbody></table></div>
+</section>
+
+<section id="transactions" class="panel">
+<h2>Demo transactions</h2>
+<div class="table-wrap"><table><thead><tr><th>Date</th><th>Type</th><th>Asset</th><th>Amount</th><th>Status</th></tr></thead>
+<tbody id="transactionsRows"></tbody></table></div>
+</section>
+
+<section id="account" class="panel account">
+<h2>Create / manage demo account</h2>
+<form id="accountForm">
+<label>Full name<input id="name" required placeholder="Demo Trader"></label>
+<label>Email<input id="email" type="email" required placeholder="you@example.com"></label>
+<button type="submit">Save Demo Profile</button>
+<p id="saved" class="success"></p>
+</form>
+</section>
+</main>
+<footer>Atlas Demo Markets • Educational paper-trading interface • DEMO ONLY — NO REAL FUNDS</footer>
+<script src="app.js"></script>
+</body>
+</html>
